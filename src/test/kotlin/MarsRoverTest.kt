@@ -25,80 +25,21 @@ class MarsRoverTest {
 
     @Test
     fun testMoveForwardNoObstacle() {
-        val mapString = """
-            --X--
-            -----
-            -----
-            -----
-            S----
-        """.trimIndent()
-        val map = makeMap(mapString)
-
-        val rover = MarsRover(Position(0, 4), Direction.N, map)
-
-        rover.executeCommands(arrayOf(Commands.FW))
-
-        assertEquals(Position(0, 3), rover.position)
-        assertEquals(Direction.N, rover.direction)
+        TODO()
     }
 
     @Test
     fun testTurnRight() {
-        val mapString = """
-            --X--
-            -----
-            -----
-            -----
-            S----
-        """.trimIndent()
-        val map = makeMap(mapString)
-
-        val rover = MarsRover(Position(0, 4), Direction.N, map)
-
-        rover.executeCommands(arrayOf(Commands.R))
-
-        assertEquals(Position(0, 4), rover.position)
-        assertEquals(Direction.E, rover.direction)
+        TODO()
     }
 
     @Test
     fun testTurnLeft() {
-        val mapString = """
-            --X--
-            -----
-            -----
-            -----
-            S----
-        """.trimIndent()
-        val map = makeMap(mapString)
-
-        val rover = MarsRover(Position(0, 4), Direction.N, map)
-
-        rover.executeCommands(arrayOf(Commands.L))
-
-        assertEquals(Position(0, 4), rover.position)
-        assertEquals(Direction.W, rover.direction)
+        TODO()
     }
 
     @Test
     fun testMoveForwardWithObstacle() {
-        val mapString = """
-            --X--
-            -----
-            -----
-            -----
-            S----
-        """.trimIndent()
-        val map = makeMap(mapString)
-
-        val startPosition = Position(2, 1)
-        val startDirection = Direction.N
-        val rover = MarsRover(startPosition, startDirection, map)
-
-        rover.executeCommands(arrayOf(Commands.FW))
-        rover.displayStatus()
-
-        assertEquals(Position(2, 1), rover.position)
-        assertEquals(Direction.N, rover.direction)
+        TODO()
     }
 }

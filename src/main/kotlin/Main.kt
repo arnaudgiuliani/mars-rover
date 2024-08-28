@@ -33,42 +33,22 @@ class MarsRover(
 
     // Method to move the Rover forward
     private fun moveForward() {
-        val (x, y) = when (direction) {
-            Direction.N -> Position(position.x, position.y-1)
-            Direction.S -> Position(position.x, position.y+1)
-            Direction.E -> Position(position.x+1, position.y)
-            Direction.W -> Position(position.x-1, position.y)
-        }
-        if( isSafePosition(x, y) ){
-            this.position = Position(x,y)
-        }
+        TODO()
     }
 
     // Method to turn the Rover right (90° clockwise)
     private fun turnRight() {
-        val newDir = when (direction) {
-            Direction.N -> Direction.E
-            Direction.E -> Direction.S
-            Direction.S -> Direction.W
-            Direction.W -> Direction.N
-        }
-        direction = newDir
+        TODO()
     }
 
     // Method to turn the Rover left (90° counterclockwise)
     private fun turnLeft() {
-        val newDir = when (direction) {
-            Direction.N -> Direction.W
-            Direction.W -> Direction.S
-            Direction.S -> Direction.E
-            Direction.E -> Direction.N
-        }
-        direction = newDir
+        TODO()
     }
 
     // Check if the position is safe (not an obstacle and within bounds)
     private fun isSafePosition(x: Int, y: Int): Boolean {
-        return x in map[0].indices && y in map.indices && map[y][x] != 'X'
+        TODO()
     }
 
     // Method to display the Rover's current status
@@ -91,7 +71,7 @@ fun main() {
     // Convert the string template into a 2D array of characters
     val map = makeMap(mapString)
 
-    // Starting position (x = 0, y = 4), assuming the ⬆️ symbol is the rover's initial position and direction
+    // Starting position (x = 0, y = 4), assuming the S symbol is the rover's initial position and direction
     val startPosition = Position(0, 4)
     val startDirection = Direction.N
     val rover = MarsRover(startPosition, startDirection, map)
